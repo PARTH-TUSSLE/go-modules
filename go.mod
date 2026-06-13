@@ -1,3 +1,3 @@
-module http-module
+module go-modules
 
 go 1.25.1

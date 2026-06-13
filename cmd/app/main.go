@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"http-module/internal/greet"
+	"go-modules/internal/greet"
 )
 
 func main() {
