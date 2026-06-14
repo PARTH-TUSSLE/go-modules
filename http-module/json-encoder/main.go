@@ -8,8 +8,8 @@ import (
 )
 
 func successHandler (w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json") // res.type("json")
+	w.WriteHeader(http.StatusOK) // res.status(200)
 
 	res := map[string]any{
 		"ok": true,
@@ -17,7 +17,7 @@ func successHandler (w http.ResponseWriter, r *http.Request) {
 		"datetime": time.Now().UTC(), 
 	}
 
-	_ = json.NewEncoder(w).Encode(res)
+	_ = json.NewEncoder(w).Encode(res) // res.send(JSON.stringify(response))
 }
 
 func main() {
